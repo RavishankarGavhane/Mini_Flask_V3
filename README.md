@@ -41,6 +41,11 @@ project structure
 
 ![img_1.png](static/img_1.png)
 
+- main_v2 file output (people taskone)
+- localhost final image
+- ![img_1.png](static/img_1.png)
+
+- ![img.png](static/img.png)
 
 
 
