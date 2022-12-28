@@ -1,10 +1,20 @@
 """
 DML stands for Data Manipulation Language
-
 This module contains generic functions to insert data into sql tables
 """
 from models.dal.db_conn_helper import get_db_conn
 from typing import List
+
+
+def fetch_resources(table_name: str):
+    """functions fetches all the data from DB tables"""
+
+    with get_db_conn() as conn:
+        cursor = conn.cursor()
+        sql_magic = f"select * from {table_name};"
+        cursor.execute(sql_magic)
+        data = cursor.fetchall()
+    return data
 
 
 def insert_resource(
@@ -12,14 +22,12 @@ def insert_resource(
 ):
     """
     Inserts a record in the database using primary key
-
     Args:
         table_name (str):
         primary_key_ (str):
         primary_value (int):
         columns_ (list):
         values (list):
-
     Returns:
         number of records inserted in DB table
     """
@@ -49,4 +57,5 @@ def insert_resource(
 
         result = cursor.execute(sql_magic)
         conn.commit()
+
     return result

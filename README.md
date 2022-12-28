@@ -34,20 +34,28 @@ project structure
 
 # Output
 - main_v1 file output 
-![img.png](img.png)
+![img.png](static/img.png)
 
 
 - main_v1 file output
 
-![img_1.png](img_1.png)
+![img_1.png](static/img_1.png)
 
 
 
 
 test_flask_v2 (project root)
+miniflask_v3 (project root)
 
     - main_v1.py
     - main_v2.py
+    - starwars_tasks (sub-application)
+        -- __init__.py
+        -- tasks.py
+    - crud_ops  (sub-application)
+        -- __init__.py
+        -- starwars.py
+    
     - static (directory)
         - flasklogo.png
     - templates (package)
@@ -57,7 +65,13 @@ test_flask_v2 (project root)
     - models (package)
         - __init__.py
         - basemodel.py
-        - datamodels  
+        - datamodels 
+            - __init__.py
+            - films.py
+            - planets.py
+            - species.py
+            - starships.py
+            - vehicles.py
         - dal
             - __init__.py
             - db_conn_helper.py
@@ -75,6 +89,7 @@ test_flask_v2 (project root)
         - randgen.py
         
     - .gitignore
+    
     
 URLS used in project
 http://127.0.0.1:5000/
