@@ -80,7 +80,8 @@ def task_one():
             char_.gender,
         ]
 
-        count = insert_resource(table_name, primary_key_, primary_val_, columns_, values_)
+        count = insert_resource(table_name, primary_key_, primary_val_,
+                                columns_, values_)
         output.append({"records_count": count, "name": char_.name})
 
         # TODO
@@ -91,7 +92,4 @@ def task_one():
     # for validating response
     # response = parse_obj_as(list(output))
 
-    # TODO convert response into flask Response object
-    # from flask import Response
-    # Response(obj, status=<>, mimetype=<>)
     return {"success": 200}
